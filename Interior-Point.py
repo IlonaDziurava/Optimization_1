@@ -145,8 +145,10 @@ def run_test_case(C, A, b, eps, case_num):
         solution = [round(float(x), 2) for x in solution]
         print('Solution:', solution)
         print('Optimal value:', round(optimum_value, 2), "\n")
+    elif solver_state == "unbounded":
+        print('Unbounded \n')
     else:
-        print('Unbounded problem', "\n")
+        print('Error:', optimum_value)
 
 
 test_case_1 = ([4, 5, 4], [[2, 3, 6], [4, 2, 4], [4, 6, 8]], [240, 200, 160], 0.0001)
